@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 
-    <title>Hello, world!</title>
+    <title>datatables + php!</title>
 </head>
 <body>
 
@@ -28,21 +28,19 @@
 
 <table id="example" class="display" width="100%"></table>
 
-
 <?php
 $information = array(
-    array("Salesman" => "Harris 1","Title"=>"Consulting JavaScript Architect","Office"=>"Home","Salary"=>"500000.00"),
-    array("Salesman" => "Harris 2","Title"=>"Consulting JavaScript Architect","Office"=>"Home","Salary"=>"500000.00"),
-    array("Salesman" => "Harris 3","Title"=>"Consulting JavaScript Architect","Office"=>"Home","Salary"=>"500000.00"),
-    array("Salesman" => "Harris 4","Title"=>"Consulting JavaScript Architect","Office"=>"Home","Salary"=>"500000.00"),
-    array("Salesman" => "Harris 5","Title"=>"Consulting JavaScript Architect","Office"=>"Home","Salary"=>"500000.00")
+    array("id" => "ITEMS 2","Title"=>"NAME ITEMS 1"),
+    array("id" => "ITEMS 3","Title"=>"NAME ITEMS 2"),
+    array("id" => "ITEMS 4","Title"=>"NAME ITEMS 3"),
+    array("id" => "ITEMS 5","Title"=>"NAME ITEMS 4")
 );
 ?>
     <?/*
     foreach ($arResult["ITEMS"] as $arItem):?>
         <?
         $information[] = array(
-            "Salesman" => $arItem['ID'],
+            "id" => $arItem['ID'],
             "Title"=>$arItem['NAME'],
         );
     endforeach;
@@ -53,7 +51,7 @@ $information = array(
         $('#example').dataTable({
             data: information,
             columns: [
-                { data: 'Salesman', title: 'Salesman' },
+                { data: 'id', title: 'id' },
                 { data: 'Title', title: 'Title' },
             ]
         });
